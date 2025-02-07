@@ -1,0 +1,75 @@
+/* Full-screen container for the background */
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Keep behind the content */
+  background: #ffe6f0; /* Light pink background */
+}
+
+/* Hearts container */
+.hearts-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allow clicks through */
+}
+
+/* Heart container to adjust position */
+.heart-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensure hearts are in front of background */
+}
+
+/* Style for the SVG heart */
+.heart-svg {
+  width: 50px;
+  height: 50px;
+  fill: red;
+  opacity: 0.8;
+  transform-origin: center;
+}
+
+/* Animated Name with carved effect */
+.animated-name {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 2; /* Make sure name is in front of hearts */
+}
+
+/* The text inside the name that is "cut-out" */
+.carved-text {
+  font-size: 10rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background: linear-gradient(90deg, rgba(255,0,0,0.6), rgba(255,105,180,0.8)); /* Gradient for effect */
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  z-index: 2; /* Ensure text is above the hearts */
+}
+
+/* Masking the hearts inside the carved text */
+.carved-text::before {
+  content: "CUTIES"; /* The name that appears carved */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: text; /* Apply the clip-path to the hearts */
+  z-index: -1;
+}

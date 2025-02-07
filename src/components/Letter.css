@@ -1,0 +1,114 @@
+/* Envelope container */
+.envelope-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	height: 100vh;
+	/* Center it vertically on the screen */
+}
+
+/* Envelope style */
+.envelope {
+	width: 450px;
+	/* Increased the width of the envelope */
+	height: 300px;
+	/* Increased the height of the envelope */
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	position: relative;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition: transform 0.6s ease;
+}
+
+.body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #f1f1f1;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+/* Letter text inside the envelope */
+.letter {
+	padding: 40px;
+	/* Increased padding for better spacing */
+	font-size: 18px;
+	/* Larger font size for readability */
+	line-height: 1.6;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	color: #333;
+	height: 200px;
+	/* Set a fixed height for the letter content */
+	overflow-y: auto;
+	/* Enable vertical scroll when content overflows */
+}
+
+/* Styling for the letter inside */
+.letter p {
+	margin: 15px 0;
+	font-family: 'Georgia', serif;
+	/* Handwritten-style font */
+	font-style: italic;
+}
+
+.letter.visible {
+	opacity: 1;
+}
+
+.password-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.password-input {
+	padding: 10px;
+	font-size: 16px;
+	margin-bottom: 10px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	width: 250px;
+}
+
+.password-submit {
+	padding: 10px 20px;
+	font-size: 16px;
+	border: none;
+	background-color: #4caf50;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.password-submit:hover {
+	background-color: #45a049;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.buttons-container {
+	display: flex;
+    margin-top: 50px;
+}
+
+.yes-button {
+	margin-right: 10px;
+}
+
+.please-img {
+	height: 66%;
+	width: 50%;
+}
