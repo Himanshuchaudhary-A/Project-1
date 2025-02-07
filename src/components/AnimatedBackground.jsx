@@ -5,8 +5,7 @@ import './AnimatedBackground.css';
 
 const AnimatedBackground = () => {
   const [hearts, setHearts] = useState([]);
-  const [currentName, setCurrentName] = useState('LOVE'); // Default name
-  const [showName, setShowName] = useState(true);
+  const currentName = 'LOVE'; // Default name
 
   useEffect(() => {
     const numHearts = 60; // Number of hearts to create
