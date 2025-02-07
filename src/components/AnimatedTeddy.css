@@ -1,13 +1,17 @@
 /* Add this to AnimatedTeddy.css */
 
 .interactive-teddy-container {
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  left: 735px;
-  top: 375px;
   justify-content: center;
   align-items: center;
+  width: 50%; /* Ensures it takes full width */
+  height: 50%; /* Ensures it takes full height */
 }
+
 
 .teddy-container {
   position: relative;

@@ -12,7 +12,7 @@ const Letter = () => {
   const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 });
   const [showResponse, setShowResponse] = useState(false); // State for showing the response
   const [loading, setLoading] = useState(false); // State for loading GIF
-  const correctPassword = "16-12-2024";
+  const correctPassword = "01-12-24";
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
